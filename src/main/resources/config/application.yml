@@ -14,7 +14,14 @@ server:
 spring:
   redis:
     host: 58.215.180.219
-  
+
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/test
+    username: root
+    password: youhuang
+    driver-class-name: com.mysql.jdbc.Driver  
+    
+    
 ---
 spring:
   profiles: dev
