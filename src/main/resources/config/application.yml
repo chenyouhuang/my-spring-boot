@@ -21,7 +21,7 @@ spring:
     password: youhuang
     driver-class-name: com.mysql.jdbc.Driver  
     
-    
+
 ---
 spring:
   profiles: dev
