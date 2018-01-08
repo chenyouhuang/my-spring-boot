@@ -11,6 +11,10 @@ my.profile: default
 server:
   port: 9090
   
+spring:
+  redis:
+    host: 58.215.180.219
+  
 ---
 spring:
   profiles: dev
