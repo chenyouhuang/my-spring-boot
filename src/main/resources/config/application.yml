@@ -33,7 +33,7 @@ spring:
       driver-class-name: com.mysql.jdbc.Driver  
     
   aop:
-    proxy-target-class: false
+    proxy-target-class: true
 
 ---
 spring:

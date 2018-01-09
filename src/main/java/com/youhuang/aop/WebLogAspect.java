@@ -22,9 +22,15 @@ public class WebLogAspect {
 
     @Pointcut("@annotation(org.springframework.web.bind.annotation.RequestMapping)")
     public void webLog(){}
+    
+    @Pointcut("execution(* com.youhuang.aop.BaseService.*(..))")
+    public void withinClass(){}
 
-    @Before("webLog()")
+    @Before("webLog() || withinClass()")
     public void doBefore(JoinPoint joinPoint) throws Throwable {
+        
+        System.out.println("属于哪种代理(cglib or java)：" + joinPoint.getThis().getClass());
+        
         // 接收到请求，记录请求内容
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
