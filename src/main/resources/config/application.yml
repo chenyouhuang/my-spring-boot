@@ -32,6 +32,8 @@ spring:
       password: youhuang
       driver-class-name: com.mysql.jdbc.Driver  
     
+  aop:
+    proxy-target-class: false
 
 ---
 spring:
