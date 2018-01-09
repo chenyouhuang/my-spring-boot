@@ -22,7 +22,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import org.hamcrest.Matchers;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-//@SpringBootTest(classes=DemoSpringApplication.class)
+@SpringBootTest(classes=DemoSpringApplication.class)
 @WebAppConfiguration
 public class SampleControllerTest {
 
